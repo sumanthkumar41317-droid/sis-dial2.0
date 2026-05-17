@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisdial - Enterprise Communication Solutions</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for better Telugu script rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans Telugu', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 transition-colors duration-200">
+
+    <!-- TOP HEADER BAR -->
+    <div class="bg-slate-900 text-slate-300 text-sm py-2 px-4 sm:px-8 flex flex-wrap justify-between items-center border-b border-slate-800">
+        <div class="flex gap-6">
+            <span><i class="fa-solid fa-envelope text-blue-400 mr-2"></i>info@sisdial.com</span>
+            <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-blue-400 mr-2"></i><span data-key="locations">Hyderabad | Tirupati | Kadapa</span></span>
+        </div>
+        <div class="flex gap-4 items-center">
+            <!-- LANGUAGE TOGGLE BUTTON -->
+            <button onclick="toggleLanguage()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-3 py-1 rounded text-xs flex items-center gap-1 transition cursor-pointer">
+                <i class="fa-solid fa-language text-sm"></i>
+                <span id="langBtnText">తెలుగు</span>
+            </button>
+            <div class="h-4 w-[1px] bg-slate-700 hidden sm:block"></div>
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 px-4 sm:px-8 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-wider text-slate-900">
+            SIS<span class="text-blue-600">DIAL</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-semibold text-slate-600">
+            <a href="#home" class="hover:text-blue-600 transition" data-key="navHome">Home</a>
+            <a href="#services" class="hover:text-blue-600 transition" data-key="navServices">Services</a>
+            <a href="#about" class="hover:text-blue-600 transition" data-key="navAbout">About Us</a>
+            <a href="#franchise" class="hover:text-blue-600 transition" data-key="navFranchise">Franchise</a>
+        </div>
+        <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition shadow-sm" data-key="getStarted">
+            Get Started
+        </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-gradient-to-r from-slate-900 to-blue-950 text-white py-24 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider" data-key="heroTag">Next-Gen Messaging</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-6 leading-tight" data-key="heroTitle">
+                    Transform Your Reach with Bulk Communication
+                </h1>
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed" data-key="heroDesc">
+                    Connect instantly with millions of customers. Drive engagement, automate alerts, and scale your business growth through our unified bulk messaging infrastructure.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition shadow-md" data-key="btnExplore">Explore Services</a>
+                    <a href="#contact" class="border border-slate-500 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition" data-key="btnDemo">Request a Demo</a>
+                </div>
+            </div>
+            <div class="hidden md:flex justify-center relative">
+                <div class="w-80 h-80 bg-blue-600/10 rounded-full absolute -top-10 -left-10 blur-2xl"></div>
+                <i class="fa-solid fa-circle-nodes text-slate-700 text-[18rem] opacity-30 animate-pulse"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES -->
+    <section id="services" class="py-20 px-4 sm:px-8 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4" data-key="servicesTitle">Enterprise-Grade Solutions</h2>
+            <p class="text-slate-600" data-key="servicesSub">Reliable, fast, and scalable messaging communication protocols built to maximize your ROI and customer engagement rates.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fa-solid fa-comment-sms"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900" data-key="s1Title">Bulk SMS Services</h3>
+                <p class="text-slate-600 leading-relaxed text-sm" data-key="s1Desc">
+                    Deliver transactional alerts, OTPs, and promotional campaigns directly to your customers' mobile inboxes with unmatched delivery rates and routing.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900" data-key="s2Title">Bulk WhatsApp Business</h3>
+                <p class="text-slate-600 leading-relaxed text-sm" data-key="s2Desc">
+                    Amplify your message with rich media, interactive quick-replies, and verified business profiles. Build high-converting, interactive chat ecosystems.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900" data-key="s3Title">RCS & 3D Marketing</h3>
+                <p class="text-slate-600 leading-relaxed text-sm" data-key="s3Desc">
+                    Leverage Rich Communication Services for app-like experiences directly in native SMS, paired with innovative dynamic localized offline marketing campaigns.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section id="about" class="bg-slate-100 py-20 px-4 sm:px-8">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6" data-key="aboutTitle">Empowering Digital Connections</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed" data-key="aboutDesc">
+                    At Sisdial, we bridge the gap between enterprises and audiences. Our continuous technological refinement ensures your transactional alerts and marketing data reach the recipient securely and instantaneously.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-600 mt-1"><i class="fa-solid fa-bullseye text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900" data-key="missionTitle">Our Mission</h4>
+                            <p class="text-slate-600 text-sm" data-key="missionDesc">To provision resilient, secure, and user-centric communication platforms that yield exceptional engagement KPIs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-blue-600 mt-1"><i class="fa-solid fa-eye text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900" data-key="visionTitle">Our Vision</h4>
+                            <p class="text-slate-600 text-sm" data-key="visionDesc">To emerge as India’s leading conversational messaging partner, fostering innovation across digital business landscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-slate-900 mb-4"><i class="fa-solid fa-shield-halved text-blue-600 mr-2"></i><span data-key="whyTitle">Why Choose Sisdial?</span></h3>
+                <ul class="space-y-3 text-slate-600 text-sm">
+                    <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i><span data-key="w1">99.9% Infrastructure Server Uptime Guarantee</span></li>
+                    <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i><span data-key="w2">End-to-End Dynamic API Integration support</span></li>
+                    <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i><span data-key="w3">Advanced Analytics and Live Tracking Panels</span></li>
+                    <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i><span data-key="w4">Localized Regional Support Team Presence</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRANCHISE SECTION -->
+    <section id="franchise" class="py-20 px-4 sm:px-8 max-w-5xl mx-auto text-center">
+        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl text-white p-8 md:p-12 shadow-xl">
+            <h2 class="text-3xl font-bold mb-4" data-key="franTitle">Partner with Sisdial</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-8" data-key="franDesc">
+                Expand your entrepreneurial footprint. Join our network of successful regional franchises and distribute premium communication capabilities to local enterprises.
+            </p>
+            <a href="#contact" class="bg-white text-blue-700 font-bold px-8 py-3 rounded-lg hover:bg-blue-50 transition shadow-md inline-block" data-key="franBtn">
+                Apply for Franchise Rights
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 pt-16 pb-8 px-4 sm:px-8 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">SISDIAL</h3>
+                <p class="text-sm leading-relaxed" data-key="footDesc">
+                    Enterprise communication infrastructure provider specializing in automated bulk voice, messaging protocols, SMS marketing, and immersive B2B tech strategies.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4" data-key="footOfficeHead">Corporate Offices</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fa-solid fa-location-dot text-blue-500 mr-2"></i><strong data-key="hyd">Hyderabad:</strong> <span data-key="hydLoc">Hitech City / Jubilee Hills Hub</span></li>
+                    <li><i class="fa-solid fa-location-dot text-blue-500 mr-2"></i><strong data-key="tpt">Tirupati:</strong> <span data-key="tptLoc">Core Business District Office</span></li>
+                    <li><i class="fa-solid fa-location-dot text-blue-500 mr-2"></i><strong data-key="kdp">Kadapa:</strong> <span data-key="kdpLoc">Regional Operations Hub</span></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4" data-key="footConnect">Connect Safely</h3>
+                <p class="text-sm mb-4" data-key="footConnectSub">Reach out to our onboarding specialists for quick setups.</p>
+                <span class="block text-white font-semibold text-lg"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i>info@sisdial.com</span>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-900 text-center text-xs">
+            &copy; 2026 Sisdial Communications. <span data-key="copyright">All rights reserved. Built internally as an optimization proposal.</span>
+        </div>
+    </footer>
+
+    <!-- REAL-TIME TRANSLATION ENGINE SCRIPT -->
+    <script>
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                locations: "Hyderabad | Tirupati | Kadapa",
+                navHome: "Home", navServices: "Services", navAbout: "About Us", navFranchise: "Franchise",
+                getStarted: "Get Started",
+                heroTag: "Next-Gen Messaging",
+                heroTitle: "Transform Your Reach with Bulk Communication",
+                heroDesc: "Connect instantly with millions of customers. Drive engagement, automate alerts, and scale your business growth through our unified bulk messaging infrastructure.",
+                btnExplore: "Explore Services", btnDemo: "Request a Demo",
+                servicesTitle: "Enterprise-Grade Solutions",
+                servicesSub: "Reliable, fast, and scalable messaging communication protocols built to maximize your ROI and customer engagement rates.",
+                s1Title: "Bulk SMS Services", s1Desc: "Deliver transactional alerts, OTPs, and promotional campaigns directly to your customers' mobile inboxes with unmatched delivery rates.",
+                s2Title: "Bulk WhatsApp Business", s2Desc: "Amplify your message with rich media, interactive quick-replies, and verified business profiles. Build high-converting ecosystems.",
+                s3Title: "RCS & 3D Marketing", s3Desc: "Leverage Rich Communication Services for app-like experiences directly in native SMS, paired with innovative dynamic localized offline campaigns.",
+                aboutTitle: "Empowering Digital Connections",
+                aboutDesc: "At Sisdial, we bridge the gap between enterprises and audiences. Our continuous technological refinement ensures your data reaches the recipient securely and instantaneously.",
+                missionTitle: "Our Mission", missionDesc: "To provision resilient, secure, and user-centric communication platforms that yield exceptional engagement KPIs.",
+                visionTitle: "Our Vision", visionDesc: "To emerge as India’s leading conversational messaging partner, fostering innovation across digital business landscapes.",
+                whyTitle: "Why Choose Sisdial?",
+                w1: "99.9% Infrastructure Server Uptime Guarantee",
+                w2: "End-to-End Dynamic API Integration support",
+                w3: "Advanced Analytics and Live Tracking Panels",
+                w4: "Localized Regional Support Team Presence",
+                franTitle: "Partner with Sisdial",
+                franDesc: "Expand your entrepreneurial footprint. Join our network of successful regional franchises and distribute premium communication capabilities to local enterprises.",
+                franBtn: "Apply for Franchise Rights",
+                footDesc: "Enterprise communication infrastructure provider specializing in automated bulk voice, messaging protocols, SMS marketing, and immersive B2B tech strategies.",
+                footOfficeHead: "Corporate Offices", hyd: "Hyderabad:", tpt: "Tirupati:", kdp: "Kadapa:",
+                hydLoc: "Hitech City / Jubilee Hills Hub", tptLoc: "Core Business District Office", kdpLoc: "Regional Operations Hub",
+                footConnect: "Connect Safely", footConnectSub: "Reach out to our onboarding specialists for quick setups.",
+                copyright: "All rights reserved. Built internally as an optimization proposal."
+            },
+            te: {
+                locations: "హైదరాబాద్ | తిరుపతి | కడప",
+                navHome: "హోమ్", navServices: "సేవలు", navAbout: "మా గురించి", navFranchise: "ఫ్రాంచైజీ",
+                getStarted: "ప్రారంభించండి",
+                heroTag: "నెక్స్ట్-జెన్ మెసేజింగ్",
+                heroTitle: "బల్క్ కమ్యూనికేషన్‌తో మీ వ్యాపార పరిధిని పెంచుకోండి",
+                heroDesc: "లక్షలాది మంది కస్టమర్లతో తక్షణమే కనెక్ట్ అవ్వండి. మా బల్క్ మెసేజింగ్ ఇన్ఫ్రాస్ట్రక్చర్ ద్వారా కస్టమర్ ఎంగేజ్‌మెంట్‌ను పెంచండి మరియు వ్యాపారాన్ని విస్తరించండి.",
+                btnExplore: "సేవలను అన్వేషించండి", btnDemo: "డెమో అడగండి",
+                servicesTitle: "ఎంటర్‌ప్రైజ్-గ్రేడ్ సొల్యూషన్స్",
+                servicesSub: "మీ వ్యాపార వృద్ధి మరియు కస్టమర్ ఎంగేజ్‌మెంట్‌ను గరిష్టంగా పెంచడానికి రూపొందించబడిన నమ్మకమైన మెసేజింగ్ సేవలు.",
+                s1Title: "బల్క్ SMS సేవలు", s1Desc: "అద్భుతమైన డెలివరీ రేట్లతో ట్రాన్సాక్షనల్ అలర్ట్లు, OTPలు మరియు ప్రమోషనల్ క్యాంపెయిన్‌లను నేరుగా కస్టమర్ల మొబైల్‌కు చేరవేయండి.",
+                s2Title: "బల్క్ వాట్సాప్ బిజినెస్", s2Desc: "రిచ్ మీడియా, ఇంటరాక్టివ్ క్విక్-రిప్లైస్ మరియు వెరిఫైడ్ బిజినెస్ ప్రొఫైల్స్‌తో మీ కస్టమర్లతో నేరుగా చాట్ చేయండి.",
+                s3Title: "RCS & 3D మార్కెటింగ్", s3Desc: "నేటివ్ SMS ఇన్‌బాక్స్‌లోనే యాప్ లాంటి అనుభవాన్ని అందించే రిచ్ కమ్యూనికేషన్ సర్వీసెస్ (RCS) మరియు వినూత్న ఆఫ్-లైన్ మార్కెటింగ్ సేవలు.",
+                aboutTitle: "డిజిటల్ అనుసంధానాల సాధికారత",
+                aboutDesc: "సిస్ డయల్ (Sisdial) లో మేము ఎంటర్‌ప్రైజ్‌లకు మరియు కస్టమర్లకు మధ్య ఉన్న దూరాన్ని తగ్గిస్తాము. మీ డేటా సురక్షితంగా మరియు తక్షణమే చేరేలా మా సాంకేతికత నిర్ధారిస్తుంది.",
+                missionTitle: "మా లక్ష్యం", missionDesc: "అసాధారణమైన కస్టమర్ ఎంగేజ్‌మెంట్‌ను అందించే సురక్షితమైన మరియు వినియోగదారు-కేంద్రిత కమ్యూనికేషన్ ప్లాట్‌ఫారమ్‌లను అందించడం.",
+                visionTitle: "మా విజన్", visionDesc: "డిజిటల్ బిజినెస్ ల్యాండ్‌స్కేప్‌లో సరికొత్త ఆవిష్కరణలను ప్రోత్సహిస్తూ, భారతదేశపు అగ్రగామి మెసేజింగ్ భాగస్వామిగా ఎదగడం.",
+                whyTitle: "సిస్ డయల్‌ను ఎందుకు ఎంచుకోవాలి?",
+                w1: "99.9% సర్వర్ అప్‌టైమ్ గ్యారెంటీ",
+                w2: "ఎండ్-టు-ఎండ్ డైనమిక్ API ఇంటిగ్రేషన్ సపోర్ట్",
+                w3: "అడ్వాన్స్‌డ్ అనలిటిక్స్ మరియు లైవ్ ట్రాకింగ్ ప్యానెల్స్",
+                w4: "స్థానిక ప్రాంతీయ సపోర్ట్ టీమ్ లభ్యత",
+                franTitle: "సిస్ డయల్‌తో భాగస్వామి అవ్వండి",
+                franDesc: "మీ వ్యాపార పరిధిని విస్తరించండి. మా విజయవంతమైన ప్రాంతీయ ఫ్రాంచైజీల నెట్‌వర్క్‌లో చేరి, స్థానిక సంస్థలకు ప్రీమియం కమ్యూనికేషన్ సేవలను అందించండి.",
+                franBtn: "ఫ్రాంచైజీ హక్కుల కోసం దరఖాస్తు చేసుకోండి",
+                footDesc: "ఆటోమేటెడ్ బల్క్ వాయిస్, మెసేజింగ్ ప్రొటోకాల్స్, SMS మార్కెటింగ్ మరియు లీనమయ్యే B2B టెక్ వ్యూహాలలో ప్రత్యేకత కలిగిన ఎంటర్‌ప్రైజ్ కమ్యూనికేషన్ సంస్థ.",
+                footOfficeHead: "కార్పొరేట్ కార్యాలయాలు", hyd: "హైదరాబాద్:", tpt: "తిరుపతి:", kdp: "కడప:",
+                hydLoc: "హైటెక్ సిటీ / జూబ్లీహిల్స్ హబ్", tptLoc: "కోర్ బిజినెస్ డిస్ట్రిక్ట్ ఆఫీస్", kdpLoc: "రీజినల్ ఆపరేషన్స్ హబ్",
+                footConnect: "సురక్షితంగా కనెక్ట్ అవ్వండి", footConnectSub: "త్వరిత సెటప్ కోసం మా ఆన్‌బోర్డింగ్ నిపుణులను సంప్రదించండి.",
+                copyright: "అన్ని హక్కులు ప్రత్యేకించబడినవి. ఒక ఆప్టిమైజేషన్ ప్రతిపాదనగా అంతర్గతంగా నిర్మించబడింది."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'te' : 'en';
+            
+            // Update button text indicator
+            document.getElementById('langBtnText').innerText = currentLang === 'en' ? 'తెలుగు' : 'English';
+            
+            // Loop and translate tags with data-key attributes
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[currentLang][key]) {
+                    element.innerText = translations[currentLang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>
